@@ -1,4 +1,4 @@
-import {HashRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -22,15 +22,15 @@ function App() {
     <Router>
       <TopBar />
       <Switch>
-        <Route path="/invoices/:id" component={Invoices}/>
-        <Route path="/checkout" component={Checkout}/>
-        <Route path="/account" component={Account}/>
-        <Route path="/cart" component={Cart}/>
-        <Route path="/register" component={Register}/>
+        <Route path="/invoices/:id" component={Invoices} />
+        <Route path="/checkout" component={Checkout} />
+        <Route path="/account" component={Account} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/register" component={Register} />
         <Route path="/login">
-          { auth.user ? <Redirect to="/" /> : <Login /> }
+          {auth.user ? <Redirect to="/" /> : <Login />}
         </Route>
-        <Route path="/" exact component={Home}/>
+        <Route path="/" exact component={Home} />
       </Switch>
     </Router>
   );

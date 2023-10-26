@@ -24,7 +24,7 @@ export default function TopBar() {
     <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
       <Container>
         <IndexLinkContainer to="/" exact>
-          <Navbar.Brand>POS</Navbar.Brand>
+          <Navbar.Brand>CAFE App</Navbar.Brand>
         </IndexLinkContainer>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -54,7 +54,7 @@ export default function TopBar() {
             <LinkContainer to="/cart" style={{ marginRight: '20px' }}>
               <Nav.Link className="position-relative" title="Keranjang belanja" >
                 <FontAwesomeIcon icon={solid('cart-shopping')} />
-                <span className="position-absolute top-10 start-100 translate-middle badge rounded-pill bg-danger">
+                <span className="position-absolute top-10 start-100 translate-middle badge rounded-pill bg-warning">
                   {totalItemCart(cart)}
                   <span className="visually-hidden">Total item</span>
                 </span>

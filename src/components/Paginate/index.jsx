@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Pagination } from 'react-bootstrap'
 import PropTypes from 'prop-types'
+import "./paginate.scss"
 
 export default function Paginate({ total, active, onSetPage }) {
   const [activePage, setActivePage] = useState(active);
@@ -13,7 +14,7 @@ export default function Paginate({ total, active, onSetPage }) {
     items = [...items, <Pagination.Item onClick={() => handleClick(i)} key={i} active={i === activePage}> {i} </Pagination.Item>]
   }
   return (
-    <Pagination>
+    <Pagination >
       <Pagination.First disabled={activePage === 1} onClick={() => setActivePage(1)} />
       <Pagination.Prev disabled={activePage === 1} onClick={() => setActivePage(activePage - 1)} />
       {items}
